@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sumit &amp; Shikha | Wedding Invitation | 2 December 2026</title>
+<meta name="description" content="You are invited to the wedding of Sumit Sinha and Shikha Shivani on Wednesday, 2 December 2026 at 7:00 PM, Raj Palace, Patna.">
+<meta name="theme-color" content="#4a0d1a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#4a0d1a; --maroon2:#2a0610; --gold:#e8c26a; --gold2:#b98a2e; --cream:#fff4dc; --flame:#ffb347;
+  --serif:"Cormorant Garamond",Georgia,serif; --script:"Great Vibes","Brush Script MT",cursive; --deva:"Tiro Devanagari Hindi","Noto Serif Devanagari",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#12030a;color:var(--cream);font-family:var(--serif);overflow:hidden;-webkit-tap-highlight-color:transparent}
+button,a{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* Stage keeps a 9:16 / 16:9 friendly frame and fills any screen */
+.stage{position:fixed;inset:0;display:grid;place-items:center;
+  background:radial-gradient(ellipse at 50% 30%,#7a1a2e 0,var(--maroon) 45%,var(--maroon2) 100%)}
+.stage::before{content:"";position:absolute;inset:0;opacity:.12;
+  background-image:radial-gradient(var(--gold) 1px,transparent 1.5px);background-size:26px 26px}
+.frame{position:absolute;inset:clamp(8px,2vmin,22px);border:2px solid var(--gold2);border-radius:6px;pointer-events:none;
+  box-shadow:inset 0 0 0 6px rgba(232,194,106,.12),inset 0 0 0 7px var(--gold2)}
+.corner{position:absolute;width:clamp(56px,13vmin,120px);color:var(--gold);opacity:.95;pointer-events:none}
+.corner.tl{top:clamp(10px,2.4vmin,26px);left:clamp(10px,2.4vmin,26px)}
+.corner.tr{top:clamp(10px,2.4vmin,26px);right:clamp(10px,2.4vmin,26px);transform:scaleX(-1)}
+.corner.bl{bottom:clamp(10px,2.4vmin,26px);left:clamp(10px,2.4vmin,26px);transform:scaleY(-1)}
+.corner.br{bottom:clamp(10px,2.4vmin,26px);right:clamp(10px,2.4vmin,26px);transform:scale(-1,-1)}
+
+/* Falling petals */
+.petals{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.petal{position:absolute;top:-8vh;width:var(--s);height:calc(var(--s)*1.3);border-radius:70% 0 70% 0;
+  background:linear-gradient(135deg,#ffb347,#e8453c);opacity:.85;animation:fall var(--t) linear var(--d) infinite}
+.petal.m{background:linear-gradient(135deg,#ffd166,#f4a300)}
+@keyframes fall{0%{transform:translate3d(0,-10vh,0) rotate(0)}100%{transform:translate3d(var(--x),112vh,0) rotate(540deg)}}
+
+/* Scenes */
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:clamp(40px,9vmin,90px) clamp(26px,8vw,120px);opacity:0;visibility:hidden;transition:opacity .9s ease,visibility .9s}
+.scene.active{opacity:1;visibility:visible}
+.scene > *{opacity:0;transform:translateY(18px)}
+.scene.active > *{animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i,0)*.45s + .25s)}
+@keyframes rise{to{opacity:1;transform:none}}
+
+.eyebrow{font-size:clamp(13px,2.2vmin,20px);letter-spacing:.38em;text-transform:uppercase;color:var(--gold)}
+.deva{font-family:var(--deva);color:var(--gold);font-size:clamp(22px,5vmin,44px);line-height:1.3}
+.script{font-family:var(--script);color:var(--gold);line-height:1.05;text-shadow:0 2px 18px rgba(232,194,106,.35)}
+.big{font-size:clamp(46px,12vmin,120px)}
+.mid{font-size:clamp(30px,7vmin,64px)}
+.title{font-weight:700;font-size:clamp(24px,5.4vmin,48px);letter-spacing:.04em}
+.text{font-size:clamp(17px,3vmin,28px);line-height:1.5;max-width:30em}
+.divider{width:min(60vw,320px);height:18px;margin:clamp(10px,2.4vmin,22px) auto;color:var(--gold)}
+.amp{font-family:var(--script);color:var(--flame);font-size:clamp(40px,10vmin,90px);line-height:1}
+.pill{display:inline-block;margin-top:clamp(8px,2vmin,18px);padding:.45em 1.4em;border:1.5px solid var(--gold2);border-radius:99px;color:var(--gold);letter-spacing:.14em;font-size:clamp(14px,2.4vmin,22px)}
+
+/* Diyas */
+.diyas{display:flex;gap:clamp(14px,5vw,56px);align-items:flex-end;margin-bottom:clamp(8px,2vmin,20px)}
+.diya{width:clamp(48px,11vmin,96px)}
+.flame{transform-origin:50% 100%;animation:flicker 1.6s ease-in-out infinite}
+.diya:nth-child(2) .flame{animation-delay:-.5s}.diya:nth-child(3) .flame{animation-delay:-1s}
+@keyframes flicker{0%,100%{transform:scale(1,1) rotate(-2deg);opacity:1}35%{transform:scale(.92,1.08) rotate(2deg);opacity:.9}70%{transform:scale(1.05,.95) rotate(-1deg)}}
+.glow{filter:drop-shadow(0 0 14px rgba(255,179,71,.8))}
+
+/* Details */
+.dt{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(10px,3vw,34px);margin:clamp(6px,1.6vmin,16px) 0}
+.dt b{display:block;font-size:clamp(20px,4.6vmin,40px);color:var(--cream)}
+.dt span{font-size:clamp(12px,2vmin,18px);letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.dt .sep{width:2px;height:clamp(50px,11vmin,100px);background:linear-gradient(transparent,var(--gold),transparent)}
+.big-date{font-size:clamp(64px,17vmin,170px);font-weight:700;color:var(--gold);line-height:.9}
+/* Wedding date on a single line (scales with the screen so it never wraps) */
+.date-line{font-weight:700;color:var(--gold);white-space:nowrap;letter-spacing:.03em;line-height:1.2;font-size:clamp(18px,min(5.4vw,5.6vmin),46px)}
+.date-line.lg{font-size:clamp(20px,min(6.4vw,8vmin),72px)}
+.date-line sup{font-size:.55em;vertical-align:.55em;letter-spacing:0}
+/* Pre-wedding events */
+.events{display:grid;gap:clamp(10px,2.4vmin,20px);width:min(100%,540px);list-style:none}
+.event{display:flex;align-items:center;gap:clamp(12px,3vmin,22px);padding:clamp(8px,1.8vmin,14px) clamp(12px,3vmin,22px);text-align:left;
+  border:1px solid rgba(232,194,106,.55);border-radius:16px;background:rgba(0,0,0,.2)}
+.ev-date{flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;width:clamp(58px,11vmin,84px);aspect-ratio:1;border-radius:50%;
+  border:2px solid var(--gold);color:var(--gold);font-size:clamp(11px,1.9vmin,16px);letter-spacing:.2em;text-transform:uppercase;line-height:1.1}
+.ev-date b{font-size:clamp(24px,5vmin,40px);letter-spacing:0;color:var(--cream);line-height:1}
+.ev-name{font-family:var(--script);font-size:clamp(30px,6.4vmin,54px);color:var(--gold);line-height:1.1}
+.ev-name small{display:block;margin-top:2px;font-family:var(--serif);font-size:clamp(13px,2.3vmin,19px);color:var(--cream);letter-spacing:.04em}
+.ev-name sup{font-size:.6em}
+/* Ganesha idol */
+.ganesha{position:relative;display:block;width:clamp(120px,26vmin,240px);aspect-ratio:200/230;filter:drop-shadow(0 0 22px rgba(255,179,71,.55));animation:bob 5s ease-in-out infinite}
+.ganesha svg,.ganesha img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){.ganesha{animation:none}}
+.count{margin-top:clamp(8px,2vmin,18px);font-size:clamp(14px,2.4vmin,22px);color:var(--gold)}
+
+/* Actions */
+.actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:clamp(10px,2.4vmin,22px)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:.55em 1.3em;border-radius:99px;border:1.5px solid var(--gold);
+  background:rgba(232,194,106,.1);color:var(--gold);font-weight:600;font-size:clamp(14px,2.3vmin,20px);text-decoration:none;cursor:pointer;
+  transition:background .2s,transform .2s,color .2s}
+.btn:hover{background:var(--gold);color:var(--maroon2);transform:translateY(-2px)}
+
+/* Family */
+.fam{display:grid;gap:clamp(10px,2.4vmin,22px);width:min(100%,520px)}
+.person{padding:clamp(10px,2.2vmin,18px) clamp(14px,3vmin,24px);border:1px solid rgba(232,194,106,.5);border-radius:14px;background:rgba(0,0,0,.18)}
+.person b{display:block;font-size:clamp(20px,4vmin,34px)}
+.person em{display:block;color:var(--gold);font-size:clamp(14px,2.3vmin,20px);letter-spacing:.12em;text-transform:uppercase;font-style:normal}
+.person a{display:inline-block;margin-top:4px;font-size:clamp(18px,3.2vmin,28px);font-weight:600;color:var(--cream);text-decoration:none;border-bottom:1px dashed var(--gold)}
+.person a:hover{color:var(--gold)}
+
+/* Controls */
+.bar{position:absolute;left:0;right:0;bottom:clamp(14px,3.4vmin,30px);display:flex;align-items:center;justify-content:center;gap:12px;z-index:5}
+.dots{display:flex;gap:8px}
+.dot{width:10px;height:10px;padding:0;border:1.5px solid var(--gold);border-radius:99px;background:transparent;cursor:pointer;transition:width .3s,background .3s}
+.dot[aria-current=true]{width:30px;background:var(--gold)}
+.ctl{width:38px;height:38px;display:grid;place-items:center;border:1.5px solid var(--gold2);border-radius:50%;background:rgba(0,0,0,.25);color:var(--gold);cursor:pointer}
+.ctl:hover{background:var(--gold);color:var(--maroon2)}
+.ctl svg{width:18px;height:18px}
+.progress{position:absolute;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,var(--gold2),var(--gold));z-index:6}
+.hint{position:absolute;top:clamp(16px,3.6vmin,30px);left:50%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,244,220,.55);z-index:5;white-space:nowrap}
+
+/* Start overlay (browsers block autoplay audio until a tap) */
+.start{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;
+  background:radial-gradient(ellipse at 50% 35%,#7a1a2e,var(--maroon2));transition:opacity .7s,visibility .7s}
+.start.off{opacity:0;visibility:hidden}
+.start .btn{font-size:clamp(18px,3vmin,26px);padding:.7em 1.8em;background:var(--gold);color:var(--maroon2)}
+.start .btn:hover{background:var(--cream)}
+
+@media (max-width:560px){.dt{grid-template-columns:1fr}.dt .sep{display:none}.hint{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .petal,.flame{animation:none}
+  .scene > *{animation-duration:.01s!important;animation-delay:0s!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Reusable ornaments -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="corner" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M4 116V30C4 15 15 4 30 4h86"/><path d="M14 116V36c0-12 10-22 22-22h80" opacity=".6"/>
+    <path d="M30 30c18 0 30 12 30 30 0 12-10 20-20 18-8-2-12-10-8-17 3-5 11-5 13 0"/>
+    <circle cx="30" cy="30" r="5" fill="currentColor"/><circle cx="60" cy="14" r="3" fill="currentColor"/><circle cx="14" cy="60" r="3" fill="currentColor"/>
+    <path d="M44 14c6 6 6 14 0 20M14 44c6 6 14 6 20 0" opacity=".7"/></g></symbol>
+  <symbol id="divider" viewBox="0 0 320 18"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+    <path d="M4 9h118M198 9h118"/><path d="M160 2l7 7-7 7-7-7z" fill="currentColor"/>
+    <path d="M132 9c6-8 14-8 20 0M168 9c6 8 14 8 20 0"/><circle cx="127" cy="9" r="2" fill="currentColor"/><circle cx="193" cy="9" r="2" fill="currentColor"/></g></symbol>
+  <symbol id="diya" viewBox="0 0 100 110">
+    <g class="flame"><path d="M50 6c10 14 16 22 16 33 0 10-7 17-16 17s-16-7-16-17C34 28 42 20 50 6z" fill="#ffb347"/>
+      <path d="M50 22c5 8 8 12 8 18 0 6-4 10-8 10s-8-4-8-10c0-6 4-10 8-18z" fill="#fff3b0"/></g>
+    <path d="M6 62h88c0 22-18 38-44 38S6 84 6 62z" fill="#c98a1b"/><path d="M6 62h88" stroke="#ffd66b" stroke-width="3"/>
+    <path d="M22 76c10 8 46 8 56 0" stroke="#ffd66b" stroke-width="2" fill="none" opacity=".7"/></symbol>
+  <!-- Lord Ganesha (stylised illustration) -->
+  <symbol id="ganesha" viewBox="0 0 200 230">
+    <circle cx="100" cy="104" r="94" fill="rgba(232,194,106,.08)" stroke="#e8c26a" stroke-width="2" opacity=".7"/>
+    <g id="gear"><path d="M70 62C34 42 14 78 26 112c8 22 30 22 44 4z" fill="#e9a23b" stroke="#b9791f" stroke-width="2"/><path d="M66 70C44 62 32 84 38 104c5 12 18 12 28 0z" fill="#f7c870"/></g>
+    <g transform="translate(200 0) scale(-1 1)"><path d="M70 62C34 42 14 78 26 112c8 22 30 22 44 4z" fill="#e9a23b" stroke="#b9791f" stroke-width="2"/><path d="M66 70C44 62 32 84 38 104c5 12 18 12 28 0z" fill="#f7c870"/></g>
+    <path d="M44 218c-6-42 4-88 30-100h52c26 12 36 58 30 100z" fill="#d9822b"/>
+    <ellipse cx="100" cy="168" rx="40" ry="44" fill="#f2a63a"/>
+    <path d="M58 198c26 16 58 16 84 0v18H58z" fill="#b3261e"/><path d="M58 198c26 16 58 16 84 0" stroke="#e8c26a" stroke-width="3" fill="none"/>
+    <path d="M72 126c8 30 38 50 62 54" stroke="#ffe08a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M146 150c14-4 24-18 22-34" stroke="#d9822b" stroke-width="13" fill="none" stroke-linecap="round"/><circle cx="168" cy="108" r="10" fill="#f2ad40"/><path d="M162 100c2-6 10-6 12 0" stroke="#b9791f" stroke-width="2" fill="none"/>
+    <path d="M54 150c-14 0-24 12-24 28" stroke="#d9822b" stroke-width="13" fill="none" stroke-linecap="round"/><path d="M20 184c0-12 7-18 12-18s12 6 12 18z" fill="#ffd166" stroke="#b9791f" stroke-width="1.5"/>
+    <ellipse cx="100" cy="84" rx="39" ry="41" fill="#f2ad40"/>
+    <path d="M64 54l8-32 15 14 13-24 13 24 15-14 8 32q-36-14-72 0z" fill="#e8c26a" stroke="#b98a2e" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="100" cy="30" r="4" fill="#e8453c"/><circle cx="80" cy="43" r="3" fill="#e8453c"/><circle cx="120" cy="43" r="3" fill="#e8453c"/>
+    <path d="M100 54v15" stroke="#e8453c" stroke-width="4" stroke-linecap="round"/><path d="M92 60c0 10 16 10 16 0" stroke="#fff4dc" stroke-width="2.5" fill="none"/>
+    <path d="M78 84q8-7 15 0M107 84q8-7 15 0" stroke="#3a1a08" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M100 94c-2 22-4 34 2 48 6 12 22 12 24-2" stroke="#b9791f" stroke-width="21" fill="none" stroke-linecap="round"/>
+    <path d="M100 94c-2 22-4 34 2 48 6 12 22 12 24-2" stroke="#f2ad40" stroke-width="15" fill="none" stroke-linecap="round"/>
+    <path d="M82 102c-9 10-9 22 0 28" stroke="#fff4dc" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M26 224c22-16 44-16 74-4 30-12 52-12 74 4-22 6-52 8-74 6-22 2-52 0-74-6z" fill="#e8c26a" stroke="#b98a2e" stroke-width="1.5"/>
+  </symbol>
+</svg>
+
+<main class="stage" id="stage" aria-label="Wedding invitation of Sumit Sinha and Shikha Shivani">
+  <div class="frame"></div>
+  <svg class="corner tl" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#corner"/></svg>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+  <div class="progress" id="progress"></div>
+  <p class="hint">Tap or press &rarr; for next</p>
+
+  <!-- Scene 1: Opening -->
+  <section class="scene" data-ms="7000" aria-label="Opening">
+    <p class="deva" style="--i:0">॥ शुभ विवाह ॥</p>
+    <div class="diyas glow" style="--i:1" aria-hidden="true">
+      <svg class="diya"><use href="#diya"/></svg><svg class="diya" style="width:clamp(60px,14vmin,120px)"><use href="#diya"/></svg><svg class="diya"><use href="#diya"/></svg>
+    </div>
+    <p class="eyebrow" style="--i:2">Together with our families</p>
+    <svg class="divider" style="--i:3" aria-hidden="true"><use href="#divider"/></svg>
+    <p class="script mid" style="--i:4">Wedding Invitation</p>
+  </section>
+
+  <!-- Scene 2: Couple -->
+  <section class="scene" data-ms="7500" aria-label="The couple">
+    <!--<p class="eyebrow" style="--i:0">Sumit weds Shikha</p>-->
+    <h1 class="script big" style="--i:1">Sumit Sinha</h1>
+    <p class="amp" style="--i:2">&amp;</p>
+    <h1 class="script big" style="--i:3">Shikha Shivani</h1>
+    <svg class="divider" style="--i:4" aria-hidden="true"><use href="#divider"/></svg>
+  </section>
+
+  <!-- Scene: Pre-wedding celebrations -->
+  <section class="scene" data-ms="8500" aria-label="Pre-wedding celebrations">
+    <p class="eyebrow" style="--i:0">Pre-wedding celebrations</p>
+    <svg class="divider" style="--i:1" aria-hidden="true"><use href="#divider"/></svg>
+    <ol class="events">
+      <li class="event" style="--i:2"><span class="ev-date"><b>25</b>Nov</span><span class="ev-name">Tilak<small>Wednesday, 25<sup>th</sup> November 2026</small></span></li>
+      <li class="event" style="--i:3"><span class="ev-date"><b>30</b>Nov</span><span class="ev-name">Matkor<small>Monday, 30<sup>th</sup> November 2026</small></span></li>
+      <li class="event" style="--i:4"><span class="ev-date"><b>1</b>Dec</span><span class="ev-name">Sangeet &amp; Haldi<small>Tuesday, 1<sup>st</sup> December 2026</small></span></li>
+    </ol>
+  </section>
+
+  <!-- Scene 3: Wedding details -->
+  <section class="scene" data-ms="7500" aria-label="Wedding details">
+    <p class="eyebrow" style="--i:0">Save the date</p>
+    <p class="date-line lg" style="--i:1">Wednesday, 2<sup>nd</sup> December 2026</p>
+    <svg class="divider" style="--i:4" aria-hidden="true"><use href="#divider"/></svg>
+    <p class="pill" style="--i:5">7:00 PM</p>
+    <p class="count" style="--i:6" id="count"></p>
+  </section>
+
+  <!-- Scene 4: Venue -->
+  <section class="scene" data-ms="8500" aria-label="Venue">
+    <p class="eyebrow" style="--i:0">Venue</p>
+    <h2 class="script big" style="--i:1;font-size:clamp(42px,10vmin,100px)">Raj Palace Patna</h2>
+    <svg class="divider" style="--i:2" aria-hidden="true"><use href="#divider"/></svg>
+    <p class="text" style="--i:3">Ranjan Path, beside Indian Oil Petrol Pump,<br>Shri Krishna Puram, Danapur Nizamat,<br>Patna, Bihar 801503</p>
+    <div class="actions" style="--i:4">
+      <a class="btn" id="mapBtn" target="_blank" rel="noopener" href="#">&#128205; Open in Maps</a>
+      <button class="btn" id="calBtn" type="button">&#128197; Add to Calendar</button>
+    </div>
+  </section>
+
+  <!-- Scene 5: Blessings -->
+  <section class="scene" data-ms="8500" aria-label="With the blessings of">
+    <p class="eyebrow" style="--i:0">With the blessings of</p>
+    <h2 class="script mid" style="--i:1">Sinha's Family</h2>
+    <svg class="divider" style="--i:2" aria-hidden="true"><use href="#divider"/></svg>
+    <div class="fam">
+      <div class="person" style="--i:3"><b>Sanjay Kumar Sinha</b><em>Father</em><a href="tel:+918130279300">8130279300</a></div>
+      <div class="person" style="--i:4"><b>Ashutosh Kumar Sinha</b><em>Cousin Brother</em><a href="tel:+919570707998">9570707998</a></div>
+    </div>
+  </section>
+
+  <!-- Scene 6: Closing -->
+  <section class="scene" data-ms="0" aria-label="Closing">
+    <div class="diyas glow" style="--i:0" aria-hidden="true"><svg class="diya"><use href="#diya"/></svg><svg class="diya"><use href="#diya"/></svg></div>
+    <p class="text" style="--i:1;font-style:italic;font-size:clamp(20px,3.8vmin,34px)">&ldquo;Please grace us with your presence, along with your family, and bestow your blessings upon the bride and groom.&rdquo;</p>
+    <svg class="divider" style="--i:2" aria-hidden="true"><use href="#divider"/></svg>
+    <p class="script mid" style="--i:3">Sumit &amp; Shikha</p>
+    <div class="actions" style="--i:4">
+      <button class="btn" id="replayBtn" type="button">&#8635; Watch again</button>
+      <button class="btn" id="shareBtn" type="button">&#10150; Share</button>
+    </div>
+  </section>
+
+  <!-- Controls -->
+  <div class="bar">
+    <button class="ctl" id="prev" type="button" aria-label="Previous scene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="ctl" id="play" type="button" aria-label="Pause"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
+    <div class="dots" id="dots" role="tablist" aria-label="Scenes"></div>
+    <button class="ctl" id="next" type="button" aria-label="Next scene"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    <button class="ctl" id="mute" type="button" aria-label="Turn music on" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H3v6h3l5 4z"/><path id="wave" d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13" style="display:none"/><path id="x" d="M16 9l5 6M21 9l-5 6"/></svg></button>
+  </div>
+
+  <!-- Start overlay -->
+  <div class="start" id="start">
+    <!-- Lord Ganesha. To use your own idol image, save it as assets/ganesha.png (transparent PNG works best); it replaces the drawing automatically. -->
+    <span class="ganesha" role="img" aria-label="Lord Ganesha">
+      <svg viewBox="0 0 200 230" aria-hidden="true"><use href="#ganesha"/></svg>
+      <img src="assets/ganesha.png" alt="" style="display:none" onload="this.style.display='';this.previousElementSibling.style.display='none'" onerror="this.remove()">
+    </span>
+    <p class="deva">॥ श्री गणेशाय नमः ॥</p>
+    <h1 class="script" style="font-size:clamp(40px,9vmin,84px)">Sumit &amp; Shikha</h1>
+    <p class="eyebrow">are getting married</p>
+    <p class="date-line">Wednesday, 2<sup>nd</sup> December 2026</p>
+    <button class="btn" id="startBtn" type="button">&#9654; Open Invitation</button>
+    <p style="font-size:13px;opacity:.6">Best with sound on</p>
+  </div>
+
+  <!-- Traditional wedding music: put your own licensed audio file here (e.g. shehnai.mp3) -->
+  <audio id="music" loop preload="none" src=""></audio>
+</main>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const scenes = $$('.scene'), dotsEl = $('#dots'), bar = $('#progress');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur = -1, playing = true, started = false, t0 = 0, elapsed = 0, raf = 0;
+
+  // ---------- Petals ----------
+  const pet = $('#petals');
+  for (let i = 0; i < (reduce ? 0 : 22); i++) {
+    const p = document.createElement('i'); p.className = 'petal' + (i % 3 ? '' : ' m');
+    p.style.cssText = `left:${Math.random() * 100}%;--s:${8 + Math.random() * 12}px;--t:${9 + Math.random() * 9}s;--d:${-Math.random() * 14}s;--x:${(Math.random() - .5) * 30}vw`;
+    pet.appendChild(p);
+  }
+
+  // ---------- Scene navigation ----------
+  scenes.forEach((s, i) => { const d = document.createElement('button'); d.className = 'dot'; d.type = 'button'; d.setAttribute('aria-label', 'Go to scene ' + (i + 1)); d.addEventListener('click', e => { e.stopPropagation(); go(i); }); dotsEl.appendChild(d); });
+  function go(n) {
+    n = Math.max(0, Math.min(scenes.length - 1, n));
+    scenes.forEach((s, i) => { s.classList.toggle('active', i === n); s.setAttribute('aria-hidden', i !== n); });
+    $$('.dot').forEach((d, i) => d.setAttribute('aria-current', i === n));
+    cur = n; elapsed = 0; t0 = performance.now(); bar.style.width = '0';
+    $('#prev').disabled = n === 0;
+  }
+  function tick(now) {
+    raf = requestAnimationFrame(tick);
+    if (!started || !playing || cur < 0) return;
+    const ms = +scenes[cur].dataset.ms;
+    if (!ms) { bar.style.width = '100%'; return; }              // last scene waits for the guest
+    elapsed += now - t0; t0 = now;
+    bar.style.width = Math.min(100, elapsed / ms * 100) + '%';
+    if (elapsed >= ms) go(cur + 1);
+  }
+  const next = () => go(cur + 1), prev = () => go(cur - 1);
+  $('#next').addEventListener('click', e => { e.stopPropagation(); next(); });
+  $('#prev').addEventListener('click', e => { e.stopPropagation(); prev(); });
+  $('#replayBtn').addEventListener('click', e => { e.stopPropagation(); go(0); });
+  $('#stage').addEventListener('click', e => { if (e.target.closest('a,button,.person')) return; if (started) next(); });
+  addEventListener('keydown', e => {
+    if (!started) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') next();
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') prev();
+    else if (e.key === ' ' && !e.target.closest('button,a')) { e.preventDefault(); toggle(); }
+  });
+
+  // ---------- Play / pause ----------
+  const playBtn = $('#play');
+  const ICON_PAUSE = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>', ICON_PLAY = '<path d="M8 5v14l11-7z"/>';
+  function toggle() {
+    playing = !playing; t0 = performance.now();
+    playBtn.setAttribute('aria-label', playing ? 'Pause' : 'Play'); playBtn.firstElementChild.innerHTML = playing ? ICON_PAUSE : ICON_PLAY;
+  }
+  playBtn.addEventListener('click', e => { e.stopPropagation(); toggle(); });
+  document.addEventListener('visibilitychange', () => { t0 = performance.now(); });
+
+  // ---------- Music (optional) ----------
+  const music = $('#music'), muteBtn = $('#mute');
+  const hasMusic = () => !!music.getAttribute('src');
+  function setMusic(on) {
+    muteBtn.setAttribute('aria-pressed', on); muteBtn.setAttribute('aria-label', on ? 'Turn music off' : 'Turn music on');
+    $('#wave').style.display = on ? '' : 'none'; $('#x').style.display = on ? 'none' : '';
+    if (!hasMusic()) return;
+    on ? music.play().catch(() => setMusic(false)) : music.pause();
+  }
+  muteBtn.addEventListener('click', e => { e.stopPropagation(); setMusic(muteBtn.getAttribute('aria-pressed') !== 'true'); });
+  if (!hasMusic()) muteBtn.hidden = true;
+
+  // ---------- Start ----------
+  $('#startBtn').addEventListener('click', () => { $('#start').classList.add('off'); started = true; go(0); setMusic(true); $('#startBtn').blur(); });
+  $('#startBtn').focus({ preventScroll: true });
+  raf = requestAnimationFrame(tick);
+
+  // ---------- Countdown ----------
+  const WEDDING = Date.parse('2026-12-02T19:00:00+05:30');
+  const days = Math.ceil((WEDDING - Date.now()) / 864e5);
+  $('#count').textContent = days > 1 ? days + ' days to go' : days === 1 ? 'Tomorrow!' : days === 0 ? 'Today is the day!' : 'With your blessings, we are married';
+
+  // ---------- Venue: maps + calendar ----------
+  const addr = 'Raj Palace, Ranjan Path, beside Indian Oil Petrol Pump, Shri Krishna Puram, Danapur Nizamat, Patna, Bihar 801503';
+  $('#mapBtn').href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(addr);
+  $('#calBtn').addEventListener('click', e => {
+    e.stopPropagation();
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Wedding Invitation//EN', 'BEGIN:VEVENT', 'UID:sumit-shikha-20261202@invite',
+      'DTSTAMP:' + new Date().toISOString().replace(/[-:]|\.\d{3}/g, ''), 'DTSTART;TZID=Asia/Kolkata:20261202T190000', 'DTEND;TZID=Asia/Kolkata:20261202T230000',
+      'SUMMARY:Wedding of Sumit Sinha & Shikha Shivani', 'LOCATION:' + addr.replace(/,/g, '\\,'),
+      'DESCRIPTION:Please grace us with your presence\\, along with your family\\, and bestow your blessings upon the bride and groom.', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' })); a.download = 'Sumit-Shikha-Wedding.ics';
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+
+  // ---------- Share ----------
+  $('#shareBtn').addEventListener('click', async e => {
+    e.stopPropagation();
+    const data = { title: 'Wedding Invitation: Sumit & Shikha', text: 'You are invited to the wedding of Sumit Sinha & Shikha Shivani, Wednesday 2 December 2026, 7:00 PM, Raj Palace Patna.', url: location.href };
+    try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.text + ' ' + data.url); e.target.textContent = 'Link copied'; } } catch (_) {}
+  });
+})();
+</script>
+</body>
+</html>
